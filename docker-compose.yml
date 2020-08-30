@@ -1,0 +1,26 @@
+version: '3'
+
+
+services:
+  db:
+    container_name: compose-mongo
+    image: mongo
+    networks:
+      - compose-SaveList
+    ports: 
+      - "27017:27017"
+  web:
+    container_name: compose-koa
+    image: compose-koa
+    build: 
+      context: ./Docker
+      dockerfile: Dockerfile.prod
+    depends_on: 
+      - db
+    ports:
+      - "4000:4000"
+    networks:
+      - compose-SaveList
+networks:
+  compose-SaveList:
+    driver: bridge

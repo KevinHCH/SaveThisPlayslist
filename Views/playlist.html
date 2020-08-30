@@ -1,0 +1,15 @@
+<h3>Playlist: <span class="text-success"><%- playlist.playlist_title %></span> [<%- playlist.playlist_duration %>]</h3>
+
+<hr>
+
+<h4>Songs</h4>
+<% playlist.songs.forEach(song => { %>
+	<a href="https://www.youtube.com/results?search_query=<%- song.songName %>+<%- song.artist.join(',') %>" target="_blank" rel="noopener noreferrer" class="text-primary">
+		<b><%- song.index %> - <%- song.songName %></b> 
+	</a>
+		<span class="">[<%- song.duration %>] </span>
+			<small><%- song.album %> - <span class="text-info"><%- song.artist.join(", ") %></span></small>
+		<br>
+		
+		<br>
+<% }) %>

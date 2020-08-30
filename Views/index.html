@@ -1,0 +1,21 @@
+<div>
+	<h2 class="text-center">Playlist</h2>
+	<% if (playlists.length == 0) { %>
+		<p class="text-danger text-center">There's no available playlists</p>
+	<% } %>
+	<div class="d-flex justify-content-around flex-wrap">
+<% playlists.forEach(playlist => { %>
+	<a href="/playlist/<%- playlist.id %>">
+	<div class="card border-primary mb-3" style="max-width: 18rem;">
+		<div class="card-header">Playlist</div>
+		<div class="card-body text-primary">
+			<h5 class="card-title"><%- playlist.playlist_title %></h5>
+			<p class="card-text">
+				Duration: <%= playlist.playlist_duration %>
+			</p>
+		</div>
+	</div>
+</a>
+<% })%>
+</div>
+</div>
