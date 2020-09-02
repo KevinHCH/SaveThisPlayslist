@@ -1,6 +1,6 @@
 #!/bin/bash
 
-docker stop mongo spotifylist && docker rm mongo spotifylist && docker rmi mongo spotilist
+docker stop mongo spotifylist && docker rm mongo spotifylist && docker rmi spotilist
 docker network rm SaveList
 
 sleep 2
