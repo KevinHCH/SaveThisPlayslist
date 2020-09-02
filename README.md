@@ -3,9 +3,9 @@
 > This application allows you to analyze a spotify playlist, obtain some data such as title, artist, album ... and save it in a mongo database.
 It also allows you to list your saved playlists and search for each song on Youtube.
   
- **Example**
- ![](demo/demo.gif)
-  
+**Example**
+![](demo/demo.gif)
+
 ### Stack
   - Docker
   - NodeJs
